@@ -1,14 +1,14 @@
 
 :root {
   --color-primary_background: #1F2023;
-  --color-fieldset_false: #D6E2DE;
-  --color-fieldset_true: #A6BDB7;
-  --color-title: #E8EAED;
+  --color-fieldset_false: #474B59;
+  --color-fieldset_true: #2A303D;
+  --color-title: #F5CFB3;
   --color-legend: #4D6D63;
   --color-legend_titles: #E8EAED;
-  --color-input: #4B6A62;
+  --color-input: #9C7557;
   --color-input_text: #ffffff;
-  --color-footer: #E96093;
+  --color-button: #C23007;
 }
 
 .container {
@@ -21,39 +21,56 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background: var(--color-primary_background);
+  background-image: url(../img/Gimnasio-1.1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 form {
-  text-align: left;
+  text-align: center;
   width: 100%;
 }
 
 h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Mulish", sans-serif;
   color: var(--color-title);
   font-size: 40px;
-  border: 15px solid var(--color-legend);
-  border-right: 15px solid transparent;
-  border-left: 15px solid transparent;
+  border: 15px double var(--color-fieldset_false);
   margin-bottom: 0;
+  border-radius: 30px;
+  text-transform: uppercase;
 }
 
 legend {
   padding: 10px;
-  border-radius: 5px;
-  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  border: 2px solid;
+  font-family: "Varela Round", sans-serif;
   color: var(--color-legend_titles);
-  background: var(--color-legend);
+  background: var(--color-fieldset_true);
 }
 
 fieldset {
   margin: 20px 0 30px 0;
+  background-size: cover;
+  background-position: center;
   background: var(--color-fieldset_false);
+  border-radius: 30px;
 }
 
 .fieldset-cambio:focus-within,
 .fieldset-cambio:hover {
+  background: var(--color-fieldset_true);
+} 
+
+.field-segundo_cambio:focus-within,
+.field-segundo_cambio:hover {
+  background: var(--color-fieldset_true);
+}
+
+.field-tercer_cambio:focus-within,
+.field-tercer_cambio:hover {
   background: var(--color-fieldset_true);
 }
 
@@ -62,15 +79,11 @@ fieldset {
   justify-content: center;
 }
 
-.field-data_line {
-  width: 50%;
-  border-bottom: 10px dotted var(--color-fieldset_false);
-}
-
 label {
-  font-family: "Roboto", sans-serif;
+  font-family: "Varela Round", sans-serif;
   font-weight: 500;
   margin: 15px 0 5px 0;
+  text-align: center;
 }
 
 .input-container {
@@ -85,19 +98,21 @@ label {
 .input-container input {
     width: 80%;
     box-sizing: border-box;
-    text-align: end;
     padding: 5px;
     margin-top: 5px;
     color: rgb(54, 53, 53);
+    border-radius: 10px;
 }
 
 .input-container select {
   width: 80%;
+  border-radius: 10px;
 }
 
 .input-container textarea {
   width: 80%;
   color: rgb(54, 53, 53);
+  border-radius: 10px;
 }
 
 .input-genero {
@@ -110,18 +125,19 @@ label {
 }
 
 .consent-checkboxes {
-  color: var(--color-legend_titles);
   font-size: 12px;
+  text-align: left;
 }
 
 .consent-checkboxes_camp {
-  color: var(--color-legend_titles);
-  font-size: 10px;
+  font-size: 15px;
   font-weight: bold;
+  text-align: start;
 }
 
 .sub-sede {
   font-weight: 500;
+  text-align: center;
 }
 
 .button-container {
@@ -132,19 +148,20 @@ label {
 .button {
   padding: 10px;
   margin: 20px;
-  border-radius: 5px;
-  background-color: var(--color-input);
-  color: var(--color-fieldset_true);
+  border-radius: 50px;
+  background-color: var(--color-fieldset_false);
+  color: var(--color-title);
 }
 
 .button:hover,
 .button:focus {
-  background-color: var(--color-fieldset_false);
-  color: var(--color-input);
+  background-color: var(--color-fieldset_true);
+  color: var(--color-button);
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
 }
 
 .activity-inter {
@@ -152,27 +169,33 @@ p {
   font-size: 15px;
 }
 
-input[name="nombre"]:focus {
+input[name="nombre"]:focus,
+input[name="nombre"]:hover {
   background: var(--color-input);
 }
 
-input[name="apellido"]:focus {
+input[name="apellido"]:focus,
+input[name="apellido"]:hover {
   background: var(--color-input);
 }
 
-input[name="documento"]:focus {
+input[name="documento"]:focus,
+input[name="documento"]:hover {
   background: var(--color-input);
 }
 
-textarea[name="descripcion"]:focus {
+textarea[name="descripcion"]:focus,
+textarea[name="descripcion"]:hover {
   background: var(--color-input);
 }
 
-input[name="telefono"]:focus {
+input[name="telefono"]:focus,
+input[name="telefono"]:hover {
   background: var(--color-input);
 }
 
-input[name="correo"]:focus {
+input[name="correo"]:focus,
+input[name="correo"]:hover {
   background: var(--color-input);
 }
 
